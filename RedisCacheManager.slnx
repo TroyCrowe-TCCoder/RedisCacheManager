@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="RedisCacheManager/RedisCacheManager.csproj" Id="e9c59988-fb82-4dcd-8442-0fc0e1051be3" />
+  <Project Path="RedisCacheManager.Tests/RedisCacheManager.Tests.csproj" Id="cf55a951-c8cd-4b4c-83f9-30d13f43f6a0" />
+</Solution>
+
