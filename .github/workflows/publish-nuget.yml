@@ -26,7 +26,7 @@ jobs:
         run: dotnet restore
 
       - name: Pack RedisCacheManager
-        run: dotnet pack RedisCacheManager.csproj -c Release -o "${{ github.workspace }}/nupkgs"
+        run: dotnet pack RedisCacheManager/RedisCacheManager.csproj -c Release -o "${{ github.workspace }}/nupkgs"
 
       - name: List packed nupkgs
         run: Get-ChildItem -Path "${{ github.workspace }}/nupkgs" -Filter *.nupkg -ErrorAction SilentlyContinue | Format-Table -AutoSize
