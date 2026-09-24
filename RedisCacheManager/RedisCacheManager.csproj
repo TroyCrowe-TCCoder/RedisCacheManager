@@ -10,13 +10,13 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>RedisCacheManager</PackageId>
+    <PackageId>TCCoder.RedisCacheManager</PackageId>
     <Version>0.1.0</Version>
     <Authors>Troy Crowe</Authors>
     <Company>Single Source Management</Company>
     <Description>Shared Redis caching, distributed locking, health check, and resilience library with built-in OpenTelemetry metrics for .NET APIs.</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/tcrowe0170/RedisCacheManager</RepositoryUrl>
+    <RepositoryUrl>https://github.com/TroyCrowe-TCCoder/RedisCacheManager</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
