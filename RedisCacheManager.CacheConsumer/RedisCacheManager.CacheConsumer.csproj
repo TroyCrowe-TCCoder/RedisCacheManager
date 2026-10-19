@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFramework>net10.0</TargetFramework>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>enable</Nullable>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<Deterministic>true</Deterministic>
+	<ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+	<AssemblyName>RedisCacheManager.CacheConsumer</AssemblyName>
+	<RootNamespace>RedisCacheManager.CacheConsumer</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
+	<PackageId>TCCoder.RedisCacheManager.CacheConsumer</PackageId>
+	<Version>0.1.0</Version>
+	<Authors>Troy Crowe</Authors>
+	<Company>Single Source Management</Company>
+	<Description>Read-only cache abstraction over TCCoder.RedisCacheManager for consumer APIs that must never write or evict cache entries — only the upstream owner of the data may do that (e.g. downstream services reading effective-role data owned by an upstream identity service).</Description>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<RepositoryUrl>https://github.com/TroyCrowe-TCCoder/RedisCacheManager</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
+	<PublishRepositoryUrl>true</PublishRepositoryUrl>
+	<EmbedUntrackedSources>true</EmbedUntrackedSources>
+	<IncludeSymbols>true</IncludeSymbols>
+	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<None Include="README.md" Pack="true" PackagePath="\" Condition="Exists('README.md')" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<PackageReference Include="TCCoder.RedisCacheManager" Version="0.1.0" />
+	<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.12" />
+	<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
