@@ -61,8 +61,13 @@ public sealed class RedisConnectionProvider : IRedisConnectionProvider, IAsyncDi
         }
     }
 
-    private async Task<string> ResolveAccessKeyAsync(CancellationToken cancellationToken)
+    private async Task<string?> ResolveAccessKeyAsync(CancellationToken cancellationToken)
     {
+        if (string.IsNullOrWhiteSpace(_options.KeyVaultUri))
+        {
+            return null;
+        }
+
         var client = new SecretClient(new Uri(_options.KeyVaultUri), new DefaultAzureCredential());
         KeyVaultSecret secret = await client.GetSecretAsync(_options.AccessKeySecretName, cancellationToken: cancellationToken).ConfigureAwait(false);
         return secret.Value;
