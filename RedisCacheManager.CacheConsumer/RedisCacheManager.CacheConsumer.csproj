@@ -15,6 +15,7 @@
 	<PackageId>TCCoder.RedisCacheManager.CacheConsumer</PackageId>
 	<Version>0.1.0</Version>
 	<Authors>Troy Crowe</Authors>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<Company>Single Source Management</Company>
 	<Description>Read-only cache abstraction over TCCoder.RedisCacheManager for consumer APIs that must never write or evict cache entries — only the upstream owner of the data may do that (e.g. downstream services reading effective-role data owned by an upstream identity service).</Description>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
