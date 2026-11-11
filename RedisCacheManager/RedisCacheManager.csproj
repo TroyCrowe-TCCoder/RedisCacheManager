@@ -11,7 +11,8 @@
 
   <PropertyGroup>
     <PackageId>TCCoder.RedisCacheManager</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Authors>Troy Crowe</Authors>
     <Company>Single Source Management</Company>
     <Description>Shared Redis caching, distributed locking, health check, and resilience library with built-in OpenTelemetry metrics for .NET APIs.</Description>
@@ -35,7 +36,6 @@
     <PackageReference Include="Polly" Version="8.8.0" />
     <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="10.0.12" />
     <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="10.0.12" />
-    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.12" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
   </ItemGroup>
 
