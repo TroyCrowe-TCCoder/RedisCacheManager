@@ -7,7 +7,7 @@ Shared Redis caching, distributed locking, health check, and resilience library 
 The access key for Azure Cache for Redis is resolved from Azure Key Vault at startup rather than stored in configuration. All cache read/write/remove failures (true cache-miss or Redis unavailability) are surfaced to callers as a simple "not found" result and logged internally; the library never throws for these conditions, so callers are expected to fall back to their own source of truth (e.g. a database call).
 
 ## Configuration
-The library follows the two-part configuration model (ADR-0002). It has no defaults, reads no `IConfiguration`, environment variables, or files, and has no section name. The host reads its own configuration and passes every value in code:
+The library follows the two-part configuration model (ADR-0002). It reads no `IConfiguration`, environment variables, or files, and has no section name. [CONFIGURATION.md](CONFIGURATION.md) lists every option with its default, whether it is required, and whether it is secret; a test keeps it in step with the code. Only `UseSsl`, `MaxRetryAttempts` and `RetryBaseDelay` can be left unset, because `false` and zero are valid for them. The host reads its own configuration and passes every other value in code:
 
 ```csharp
 services.AddRedisCacheManager(options =>
