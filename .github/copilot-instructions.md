@@ -33,3 +33,6 @@
 
 ## Branch Repair Plan
 - First clean main to the intended final pipeline state, then recreate dev from main, then test the implementation again without squash merges.
+
+## Backlog
+- **UseSsl default (revisit when moving to Azure).** The code default for `UseSsl` is `false` and it is not validated. This is intentional for now because there is no hosting environment yet. When the apps move to Azure, decide whether to default it to `true` (ValidationEngine GlobalCachingStandards section 10.2 says it should) or to require it. Update `CONFIGURATION.md` and the drift test with the change; a default change is a breaking change for hosts that rely on it.
